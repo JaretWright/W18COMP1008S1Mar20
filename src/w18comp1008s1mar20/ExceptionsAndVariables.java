@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package w18comp1008s1mar20;
+
+import java.util.Scanner;
 
 /**
  *
@@ -11,5 +8,20 @@ package w18comp1008s1mar20;
  */
 public class ExceptionsAndVariables
 {
-    
+    public static void main(String[] args)
+    {
+        int number=0; //variable used outside of the try block, need to be defined
+                      //outside of the try block.
+        try{
+            Scanner keyboard = new Scanner(System.in);
+            System.out.print("Enter your favourite number: ");
+            number = keyboard.nextInt();
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        
+        System.out.printf("My fav number is: %d%n",number);
+    }
 }
